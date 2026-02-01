@@ -52,8 +52,3 @@ temp/
 *.dmg
 *.exe
 *.AppImage
-
-# Icons (if not committed)
-resources/icons/*.icns
-resources/icons/*.ico
-resources/icons/*.png
