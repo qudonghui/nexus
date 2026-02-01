@@ -1,0 +1,555 @@
+/**
+ * Nexus - Tool Specific Styles
+ * 工具特定样式 - 参考 He3 设计风格
+ */
+
+/* ==================== JSON 格式化工具 ==================== */
+.json-tool {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  min-height: 400px;
+}
+
+.json-input-area,
+.json-output-area {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.json-input-area > .tool-section,
+.json-output-area > .tool-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.json-toolbar {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.json-editor {
+  flex: 1;
+  min-height: 350px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.json-output {
+  flex: 1;
+  min-height: 350px;
+  background: var(--color-bg-tertiary);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border: 1px solid var(--color-border);
+}
+
+.json-output .json-key {
+  color: var(--color-text-link);
+}
+
+.json-output .json-string {
+  color: var(--color-success);
+}
+
+.json-output .json-number {
+  color: var(--color-warning);
+}
+
+.json-output .json-boolean {
+  color: var(--color-error);
+}
+
+.json-output .json-null {
+  color: var(--color-text-muted);
+}
+
+/* ==================== Base64 工具 ==================== */
+.base64-tool {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.base64-mode {
+  display: flex;
+  gap: 8px;
+}
+
+.base64-editor {
+  min-height: 200px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.base64-result {
+  min-height: 200px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* ==================== 时间戳工具 ==================== */
+.timestamp-tool {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timestamp-display {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.timestamp-value {
+  flex: 1;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-text-link);
+  text-align: center;
+  padding: 16px;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-lg);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  border: 1px solid var(--color-border);
+}
+
+.timestamp-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.timestamp-converter {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.timestamp-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  padding-top: 28px;
+}
+
+/* ==================== 颜色选择器工具 ==================== */
+.color-tool {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.color-preview {
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.color-values {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.color-value-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.color-value-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.color-value-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.color-value-input input {
+  flex: 1;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.color-value-copy {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.color-value-copy:hover {
+  border-color: var(--color-text-link);
+  color: var(--color-text-link);
+}
+
+.color-value-copy svg {
+  width: 14px;
+  height: 14px;
+}
+
+.color-picker-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.color-picker {
+  flex: 1;
+}
+
+/* ==================== 密码生成器工具 ==================== */
+.password-tool {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.password-display {
+  display: flex;
+  gap: 8px;
+}
+
+.password-display input {
+  flex: 1;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.password-settings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.password-length {
+  grid-column: 1 / -1;
+}
+
+.password-length-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.password-length-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text-link);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.password-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ==================== QR 码生成工具 ==================== */
+.qr-tool {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.qr-input {
+  min-height: 80px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.qr-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.qr-canvas {
+  max-width: 100%;
+  background: white;
+  padding: 16px;
+  border-radius: var(--radius-md);
+}
+
+.qr-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ==================== 计算器工具 ==================== */
+.calculator-tool {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.calculator-display {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  text-align: right;
+  border: 1px solid var(--color-border);
+  border-bottom: none;
+}
+
+.calculator-expression {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  min-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calculator-result {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  min-height: 44px;
+  overflow: hidden;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+}
+
+.calc-btn {
+  height: 60px;
+  border: none;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-weight: 500;
+}
+
+.calc-btn:hover {
+  background: var(--color-bg-hover);
+}
+
+.calc-btn:active {
+  background: var(--color-bg-active);
+}
+
+.calc-btn.operator {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-link);
+}
+
+.calc-btn.equals {
+  background: var(--color-text-link);
+  color: white;
+}
+
+.calc-btn.equals:hover {
+  background: var(--color-accent-hover);
+}
+
+.calc-btn.clear {
+  background: var(--color-error);
+  color: white;
+}
+
+.calc-span-2 {
+  grid-column: span 2;
+}
+
+/* ==================== 单位转换工具 ==================== */
+.unit-tool {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.unit-type-selector {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.unit-converter {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.unit-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  padding-top: 28px;
+}
+
+.unit-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.unit-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.unit-input-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* ==================== 空状态 ==================== */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.empty-state-icon {
+  width: 80px;
+  height: 80px;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-state-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.empty-state-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.empty-state-description {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  max-width: 300px;
+}
+
+/* ==================== 响应式调整 ==================== */
+@media (max-width: 1024px) {
+  .json-tool {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .json-input-area,
+  .json-output-area {
+    min-height: 250px;
+  }
+
+  .json-editor,
+  .json-output {
+    min-height: 200px;
+  }
+
+  .timestamp-converter {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .timestamp-arrow {
+    transform: rotate(90deg);
+    padding-top: 0;
+  }
+
+  .color-values {
+    grid-template-columns: 1fr;
+  }
+
+  .password-settings {
+    grid-template-columns: 1fr;
+  }
+
+  .unit-converter {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .unit-arrow {
+    transform: rotate(90deg);
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator-tool {
+    max-width: 100%;
+  }
+
+  .calc-btn {
+    height: 52px;
+    font-size: 18px;
+  }
+
+  .calculator-result {
+    font-size: 28px;
+  }
+}

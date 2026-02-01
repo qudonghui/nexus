@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+build/
+out/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Electron
+.npm/
+.cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Package files
+*.zip
+*.tar.gz
+*.dmg
+*.exe
+*.AppImage
+
+# Icons (if not committed)
+resources/icons/*.icns
+resources/icons/*.ico
+resources/icons/*.png

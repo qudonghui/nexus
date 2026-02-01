@@ -1,0 +1,104 @@
+{
+  "name": "nexus-toolbox",
+  "version": "0.0.1",
+  "description": "Nexus - All Tools. Zero Connection. A cross-platform offline desktop toolbox for developers and daily use.",
+  "main": "src/main/main.js",
+  "author": {
+    "name": "Nexus Team",
+    "email": "contact@nexus.dev"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "dist": "npm run build",
+    "pack": "electron-builder --dir"
+  },
+  "keywords": [
+    "electron",
+    "desktop",
+    "offline",
+    "toolbox",
+    "developer-tools",
+    "offline-tools"
+  ],
+  "dependencies": {
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "37.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "engines": {
+    "node": ">=22.16.0",
+    "npm": ">=10.0.0"
+  },
+  "build": {
+    "appId": "dev.nexus.toolbox",
+    "productName": "Nexus",
+    "directories": {
+      "output": "dist",
+      "buildResources": "resources"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "resources/icons/toolbox.png",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist"
+    },
+    "win": {
+      "icon": "resources/icons/toolbox.png",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "linux": {
+      "icon": "resources/icons/toolbox.png",
+      "category": "Development",
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "resources/icons/toolbox.png",
+      "uninstallerIcon": "resources/icons/toolbox.png",
+      "installerHeaderIcon": "resources/icons/toolbox.png",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}

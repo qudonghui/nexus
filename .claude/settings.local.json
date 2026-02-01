@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(perl:*)",
+      "Bash(python3:*)",
+      "Bash(npm start:*)",
+      "Bash(npm install:*)",
+      "Bash(pgrep:*)",
+      "Bash(pkill:*)"
+    ]
+  }
+}
