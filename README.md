@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Nexus Logo](resources/icons/toolbox.png)
+![Nexus Logo](resources/icons/toolbox.ico)
 
 **一个基于 Electron 的跨平台离线工具桌面应用**
 

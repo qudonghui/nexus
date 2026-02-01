@@ -52,3 +52,6 @@ temp/
 *.dmg
 *.exe
 *.AppImage
+
+# trea
+.vercel/

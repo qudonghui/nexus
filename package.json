@@ -62,7 +62,7 @@
       "entitlementsInherit": "build/entitlements.mac.plist"
     },
     "win": {
-      "icon": "resources/icons/toolbox.png",
+      "icon": "resources/icons/toolbox.ico",
       "target": [
         "nsis",
         "portable"
@@ -80,9 +80,9 @@
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "installerIcon": "resources/icons/toolbox.png",
-      "uninstallerIcon": "resources/icons/toolbox.png",
-      "installerHeaderIcon": "resources/icons/toolbox.png",
+      "installerIcon": "resources/icons/toolbox.ico",
+      "uninstallerIcon": "resources/icons/toolbox.ico",
+      "installerHeaderIcon": "resources/icons/toolbox.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true
     },
